@@ -1,9 +1,21 @@
+function getInput( id ){
+    let amount = document.getElementById(id);
+    let inputText = amount.value;
+    let inputAmountValue = parseFloat(inputText);
+
+    // clear input
+    amount.value = "";
+
+    return inputAmountValue;
+}
+
+
 // deposit
 document.getElementById('deposit').addEventListener('click', function(){
-    let amount = document.getElementById('deposit-amount');
-    let inputAmount = amount.value;
+    let inputAmount = getInput('deposit-amount');
     let mainDeposit = document.getElementById("main-deposit");
     let prevDeposit = mainDeposit.innerText;
+
     
     // update deposit
     let newDepositAmount = parseFloat(prevDeposit) + parseFloat(inputAmount);
@@ -15,9 +27,24 @@ document.getElementById('deposit').addEventListener('click', function(){
     let updateMainValue = parseFloat(inputAmount) + parseFloat(mainBalanceValue);
     mainBalance.innerText = updateMainValue;
 
+})
 
-    // console.log(mainDepositConvert+parseInt(amount));
+// witthdraw
+document.getElementById("withdraw").addEventListener("click", function(){
+    const withdrawAmount = getInput('withdraw-amount');
 
-    // clear input
-    amount.value = "";
+    const mainWithdraw = document.getElementById('withdraw-balance');
+    const prevWitdraw = mainWithdraw.innerText;
+
+    // update withdraw
+    let newWithdrawAmount = parseFloat(prevWitdraw) + withdrawAmount;
+    mainWithdraw.innerText = newWithdrawAmount;
+
+    // update main balance
+    const mainBalance = document.getElementById('main-balance');
+    const mainBalanceValue = mainBalance.innerText;
+    const updateMainValue = parseFloat(mainBalanceValue) - withdrawAmount;
+    mainBalance.innerText = updateMainValue;
+
+
 })

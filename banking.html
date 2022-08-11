@@ -11,21 +11,21 @@
 </head>
 <body>
     <header class="my-16">
-        <h1 class="text-5xl	text-center	font-bold text-teal-600">Bank Calculation</h1>
+        <h1 class="text-5xl	text-center	font-bold text-violet-600">Bank Calculation</h1>
     </header> 
 
-    <main class="pt-12 w-3/4 mx-auto">
+    <main class="pt-10 w-3/4 mx-auto">
         <section>
             <div class="grid grid-cols-3 gap-4  text-white font-semibold">
-                <div class="bg-blue-500 p-12 rounded">
+                <div class="bg-violet-500 p-12 rounded-lg shadow-md">
                     <h3 class="text-3xl">Deposit</h3>
                     <h4  class="text-2xl">$ <span id="main-deposit">00</span></h4>
                 </div>
-                <div class="bg-blue-500 p-12 rounded">
+                <div class="bg-violet-500 p-12 rounded-lg shadow-md">
                     <h3 class="text-3xl">Withdraw</h3>
-                    <h4 class="text-2xl">$00</h4>
+                    <h4 class="text-2xl">$ <span id="withdraw-balance">00</span></h4>
                 </div>
-                <div class="bg-blue-500 p-12 rounded">
+                <div class="bg-violet-500 p-12 rounded-lg shadow-md">
                     <h3 class="text-3xl">Balance</h3>
                     <h4 class="text-2xl">$ <span id="main-balance">1250</span></h4>
                 </div>
@@ -36,17 +36,17 @@
         <section>
             <div class="grid grid-cols-2 gap-4">
                 <div>
-                    <h3 class="text-3xl my-8">Please Deposit</h3>
+                    <h3 class="text-3xl mt-10 mb-4 font-medium">Please Deposit</h3>
                     <div>
                         <input id="deposit-amount" class="block mb-2 border rounded-md p-2 w-3/4 border-violet-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" type="email" placeholder="Enter amount">
-                        <button id="deposit" class="px-4 py-2 bg-violet-900 text-white rounded-md font-medium hover:bg-violet-600">Deposit</button>
+                        <button id="deposit" class="px-4 py-2 bg-violet-600 text-white rounded-md font-medium hover:bg-violet-800">Deposit</button>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-3xl my-8">Withdraw Amount</h3>
+                    <h3 class="text-3xl mt-10 mb-4 font-medium">Withdraw Amount</h3>
                     <div>
                         <input id="withdraw-amount" class="block mb-2 border rounded-md p-2 w-3/4 border-violet-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" type="email" placeholder="Enter amount">
-                        <button id="withdraw" class="px-4 py-2 bg-violet-900 text-white rounded-md font-medium hover:bg-violet-600">Withdraw</button>
+                        <button id="withdraw" class="px-4 py-2 bg-violet-600 text-white rounded-md font-medium hover:bg-violet-800">Withdraw</button>
                     </div>
                 </div>
             </div>
