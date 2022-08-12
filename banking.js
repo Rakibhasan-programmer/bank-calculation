@@ -5,7 +5,6 @@ function getInput( id ){
 
     // clear input
     amount.value = "";
-
     return inputAmountValue;
 }
 
@@ -45,6 +44,5 @@ document.getElementById("withdraw").addEventListener("click", function(){
     const mainBalanceValue = mainBalance.innerText;
     const updateMainValue = parseFloat(mainBalanceValue) - withdrawAmount;
     mainBalance.innerText = updateMainValue;
-
 
 })
